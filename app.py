@@ -18,8 +18,8 @@ st.sidebar.title("シャインマスカット収穫時期判定アプリ-ai-app1
 st.sidebar.write("画像認識モデルを使ってシャインマスカットの収穫時期の判定をします。")
 
 st.sidebar.write("")
-col1,col2 = st.columns(2)
-#with col1:    
+### 20240903col1,col2 = st.columns(2)
+
 img_source = st.sidebar.radio("画像のソースを選択してください。",
                               ("画像をアップロード", "カメラで撮影"))
 if img_source == "画像をアップロード":
@@ -45,7 +45,7 @@ if img_file is not None:
         
     
         # 結果の表示
-    with col2:       
+    ### 0240903with col2:       
         #st.subheader("判定結果")
         st.subheader("判定結果")
         st.image(annotated_frame, caption='出力画像', width=280) 
