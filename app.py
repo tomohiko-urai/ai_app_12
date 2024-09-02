@@ -19,13 +19,14 @@ st.sidebar.write("画像認識モデルを使ってシャインマスカット�
 
 st.sidebar.write("")
 col1,col2 = st.columns(2)
-#img_source = st.sidebar.radio("画像のソースを選択してください。",
-#                              ("画像をアップロード", "カメラで撮影"))
-#if img_source == "画像をアップロード":
-#    img_file = st.sidebar.file_uploader("画像を選択してください。", type=["png", "jpg"])
-#elif img_source == "カメラで撮影":
 with col1:    
-    img_file = st.camera_input("カメラで撮影")
+img_source = st.sidebar.radio("画像のソースを選択してください。",
+                              ("画像をアップロード", "カメラで撮影"))
+if img_source == "画像をアップロード":
+    img_file = st.sidebar.file_uploader("画像を選択してください。", type=["png", "jpg", "JPG"])
+elif img_source == "カメラで撮影":
+### 20240903 with col1:    
+    ### 20240903 img_file = st.camera_input("カメラで撮影")
 
 #with col2:
 if img_file is not None:
