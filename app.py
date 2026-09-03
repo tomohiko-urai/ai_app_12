@@ -7,8 +7,13 @@ from PIL import Image
 import streamlit as st
 import cv2
 from ultralytics import YOLO
+# 追加　２０２６・９・３ *****
+import torch
+import ultralytics.nn.tasks
 
-
+# PyTorch 2.6以降の読み込み制限を解除する設定
+torch.serialization.add_safe_globals([ultralytics.nn.tasks.DetectionModel])
+#***********
 image_size = 50
 
 
