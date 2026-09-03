@@ -9,6 +9,14 @@ import cv2
 from ultralytics import YOLO
 # 追加　２０２６・９・３ *****
 import torch
+# ---- PyTorch 2.6以降の weights_only エラーを回避するコード ----
+_original_torch_load = torch.load
+def safe_torch_load(*args, **kwargs):
+    kwargs['weights_only'] = False
+    return _original_torch_load(*args, **kwargs)
+
+torch.load = safe_torch_load
+# -----------------------------------------------------------------
 import ultralytics.nn.tasks
 
 # PyTorch 2.6以降の読み込み制限を解除する設定
