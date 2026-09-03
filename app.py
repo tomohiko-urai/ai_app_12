@@ -12,7 +12,18 @@ import torch
 import ultralytics.nn.tasks
 
 # PyTorch 2.6以降の読み込み制限を解除する設定
-torch.serialization.add_safe_globals([ultralytics.nn.tasks.DetectionModel])
+#torch.serialization.add_safe_globals([ultralytics.nn.tasks.DetectionModel])
+
+import torch.nn as nn
+
+
+# PyTorch 2.6以降の安全チェックでブロックされているモデル構成クラスを許可
+torch.serialization.add_safe_globals([
+    ultralytics.nn.tasks.DetectionModel,
+    nn.Sequential
+])
+
+
 #***********
 image_size = 50
 
