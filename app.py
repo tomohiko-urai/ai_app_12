@@ -36,7 +36,7 @@ torch.serialization.add_safe_globals([
 image_size = 50
 
 
-st.set_option("deprecation.showfileUploaderEncoding", False)
+###  2026/09/03 st.set_option("deprecation.showfileUploaderEncoding", False)
 
 st.sidebar.title("シャインマスカット収穫時期判定アプリ-ai-app12")
 st.sidebar.write("画像認識モデルを使ってシャインマスカットの収穫時期の判定をします。")
