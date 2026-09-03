@@ -1,3 +1,3 @@
-# 2026/09/03 修正　libgl1
-libgl1-mesa-glx
-libglib2.0-0
+libgl1
+##libgl1-mesa-glx
+##libglib2.0-0
