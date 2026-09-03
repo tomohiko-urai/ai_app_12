@@ -1,4 +1,5 @@
 streamlit
+--no-deps opencv-python
 opencv-python-headless
 Pillow
 torch
